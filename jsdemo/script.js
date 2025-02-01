@@ -23,4 +23,28 @@ const events = [
     }
 ];
 
+function updatePage() {
+    const contentDiv = document.getElementById("content");
+    const pageNumber = document.getElementById("pageNumber");
+    const totalPages = document.getElementById("totalPages");
 
+    contentDiv.innerHTML = `<h2>${events[currentPage].title}</h2><p>${events[currentPage].text}</p>`;
+    pageNumber.innerText = currentPage + 1;
+    totalPages.innerText = events.length;
+}
+
+function nextPage() {
+    if (currentPage < events.length - 1) {
+        currentPage++;
+        updatePage();
+    }
+}
+
+function prevPage() {
+    if (currentPage > 0) {
+        currentPage--;
+        updatePage();
+    }
+}
+
+updatePage();
