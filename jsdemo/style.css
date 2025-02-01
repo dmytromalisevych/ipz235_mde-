@@ -30,3 +30,37 @@ body {
     position: absolute;
     transition: transform 0.6s ease-in-out;
 }
+
+
+.left-page {
+    left: 0;
+    border-right: none;
+}
+
+.right-page {
+    right: 0;
+    border-left: none;
+    transform-origin: left;
+    transform: rotateY(0deg);
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #c4a484;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #9c7a58;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
