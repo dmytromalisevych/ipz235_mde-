@@ -28,25 +28,12 @@ function updatePage() {
     const pageNumber = document.getElementById("pageNumber");
     const totalPages = document.getElementById("totalPages");
 
+    // Оновлюємо текст сторінки
     contentDiv.innerHTML = `<h2>${events[currentPage].title}</h2><p>${events[currentPage].text}</p>`;
     pageNumber.innerText = currentPage + 1;
     totalPages.innerText = events.length;
-
-    const leftPage = document.getElementById("leftPage");
-    const rightPage = document.getElementById("rightPage");
-
-    if (currentPage % 2 === 0) {
-        leftPage.style.zIndex = 2;
-        rightPage.style.zIndex = 1;
-        leftPage.style.transform = "rotateY(0deg)";
-        rightPage.style.transform = "rotateY(180deg)";
-    } else {
-        leftPage.style.zIndex = 1;
-        rightPage.style.zIndex = 2;
-        leftPage.style.transform = "rotateY(-180deg)";
-        rightPage.style.transform = "rotateY(0deg)";
-    }
 }
+
 
 function nextPage() {
     if (currentPage < events.length - 1) {
