@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f0e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.book {
+    width: 600px;
+    height: 400px;
+    display: flex;
+    position: relative;
+    perspective: 1000px;
+}
+
+.page {
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    background-color: #fffbe8;
+    border: 2px solid #c4a484;
+    position: absolute;
+    transition: transform 0.6s ease-in-out;
+}

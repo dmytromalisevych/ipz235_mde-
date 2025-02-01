@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя Автобіографія</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="book">
+    <div class="page left-page">
+        <h1>Привіт, це моя історія!</h1>
+        <p>Перегортай сторінки, щоб дізнатися більше про мене.</p>
+        <button onclick="nextPage()">Наступна сторінка →</button>
+    </div>
+    <div class="page right-page" id="story">
+        <div class="content" id="content">
+        </div>
+        <div class="pagination">
+            Сторінка <span id="pageNumber">1</span> з <span id="totalPages">5</span>
+        </div>
+        <button onclick="prevPage()">← Попередня</button>
+        <button onclick="nextPage()">Наступна →</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
